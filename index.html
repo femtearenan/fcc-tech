@@ -3,9 +3,234 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Developing from Protyped Web Site</title>
 </head>
 <body>
-    
+    <nav id="navbar">
+        <header>Production from Protyped Web Site</header>
+        <div id="nav-link-container">
+            <a class="nav-link" href="#Introduction">Introduction</a>
+            <a class="nav-link" href="#Prerequisites">Prerequisites</a>
+            <a class="nav-link" href="#Prototyping">Prototyping</a>
+            <a class="nav-link" href="#Development">Development</a>
+            <a class="nav-link" href="#Lessons_Learned">Lessons Learned</a>
+        </div>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <article>
+                <p>This documentation covers some of the aspects to consider when prototyping a website and then how to set up a process to make that design into production.</p>
+                <p>This documentation covers thusly:</p>
+                <ul>
+                    <li>Introduction: what you can expect of this documentation.</li>
+                    <li>Prerequisites: what we expect of the reader.</li>
+                    <li>Prototyping: before you drive, know where you are going!</li>
+                    <li>Development: now, drive where you planned to go!</li>
+                    <li>Lessons Learned: now that you know how to drive, how could it be more comfortably</li>
+                </ul>
+
+                <p>Congratulations!</p>
+                <p>Just reading this introduction means that you have considered weather planning ahead is a good idea.
+                Sure, it's fun to just jump in. But please, make sure there are no sharks beforehand!</p>
+                <img src="images/No shark.png" alt="A pool with no shark in it.">
+
+                <p>This time we will do without jumping in, even if it looks safe for now. So let's look ahead. 
+                Prototyping in the context of producing a website means drafting a blueprint for design and 
+                user experience. It entails setting up goals, and objectives to achieve those goals. It can 
+                cover what technologies are needed.</p>
+
+                <p>The objectives guide the development. The clearer and simpler the objectives, the easier it is 
+                to make increments to achieve the goals. Sometimes it all comes down to implementing a design with 
+                HTML and CSS.</p>
+
+                <p>Let's get started.</p>
+            </article>
+        </section>
+        <section class="main-section" id="Prerequisites">
+            <header>Prerequisites</header>
+            <article>
+                <p>Reading this documentation means that you are proficient in english. That's great. 
+                That's the first prerequisite. Other prerequisites are listed below:</p>
+                <ul>
+                    <li>Handy with a computer</li>
+                    <li>Know the difference between a bug and a feature</li>
+                    <li>Knowledgeable in HTML and CSS.</li>
+                    <li>Knowledgeable about Adobe XD or similar software for UI/UX design</li>
+                    <li>Knowledgeable about the difference between UI and UX.</li>
+                </ul>
+                <p>The documentation is meant to guide you to set up your own processes for prototyping 
+                and developing websites. This means that you should be willing to implement these 
+                recommendations in a way that suits your business.</p>
+            </article>
+        </section>
+        <section class="main-section" id="Prototyping">
+            <header>Prototyping</header>
+            <article>
+                <img src="images/its a dog.png" alt="The pool is actually a dog's bowls, and the dog has come to drink some.">
+                <p>So if you just thought that sharks is all you have to worry about, think again!
+                Jumping in to the water without a plan might have been an okey idea. But did you consider the scale?
+                Prototyping takes care of what might come as a surprise further down the road if you had not.</p>
+                
+                <p>A place to start with prototyping is to set up a goal and objectives. 
+                A goal could be to have an aesthetically pleasing Personal Website. Objectives to achieve this could be 
+                to pick colours and fonts fitting your theme, as well as designing elements and where to put them, 
+                and write a presentation.</p>
+
+                <p>Having an idea where you want to go, it's then time to make your design. During this process it's 
+                possible you have to modify your objectives; you may view some objectives in a new light as you work 
+                with them.</p>
+
+                <p>A popular protoyping software is Adobe XD. It has features to cover designing both a 
+                <abbr title="User Interface">UI</abbr> as well as <abbr title="User Experience">UX</abbr>. Adobe XD makes 
+                it easy to design your website for different screens, and so it makes a good foundation for a 
+                Responsive Website.</p>
+
+                <p>With a prototyping software it's easy to see where elements go, what sizes they should be and which 
+                colours to use. Here's an example of how a prototype from Adobe XD can look like: </p>
+                <img src="images/Home.png" alt="A prototype as an image of a website.">
+
+                <p>Having a finished prototype, you are then ready to move over to development.</p>
+            </article>
+        </section>
+        <section class="main-section" id="Development">
+            <header>Development</header>
+            <article>
+                <p>You should now know what elements go into your website. If you haven't chosen what technologies to use, 
+                now is a good time!</p>
+                <p>Add the elements you need to your first page. At this point, focus on making it semantically consistent 
+                and comprehensible. You want your site to meet accessibility demands. A first accessibility demand is to make 
+                sure that font size and contrast makes for easy reading. If it does not, go back to the design stage and make 
+                it so. But a more subtle accessibility demand is to place elements in a order that makes sense and using the 
+                correct element. Let's reiterate, focus on making it semantically consistent first - choosing an h3 over an
+                h2 because it looks better that way is not! </p>
+                <code>
+                    &lt;h1&gt;This is a heading&lt;/h1&gt;<br/> 
+                    &lt;!-- what's missing? --&gt;<br/>
+                    &lt;h3&gt;This is a subheading&lt;/h3&gt;<br/>
+                </code>
+                <p>After you have your elements in place, take another look over. Is there elements that needs further explanation 
+                    for any one using screen readers? Are clickable items as clickable as they should be? Are they of right 
+                    type of element (a button vs a link can mean different things).
+                </p>
+                <p>Next up, add some style! Having the prototype makes for a better end result - otherwise it is easy to get 
+                    swept away by all the effects you can implement, or perhaps limit yourself because you can't imagine 
+                    how to achieve something. With the prototype at hand you have your objectives. Focus on the big things first. 
+                    How do you want to control placements? Margins and floats? Flex? Grid? Depending on the demands of your site, 
+                    a place to start is to work from the top down. In that way you also work with bigger elements before moving 
+                    down to the details.
+                </p>
+                <code>
+                    <pre>
+body {
+    padding: 1em 2em 1em 2em; 
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+                    </pre>
+                </code>
+
+                <p>Having nailed the coding part of the presentation it's time to focus on what happens with it on 
+                    different screens. Responsiveness is key! So we're really not ready to move on from from presentation
+                    until we have a site that works well on all supported screens.
+                </p>
+                <p>Once presentation has been taken care of it's time to focus on behaviour of the site. What is interactive 
+                    or dynamic? Will you implement this behaviour with CSS or JS? Here's a snippet of how to implement a 
+                    behaviour to indicated where on a page a visitor is by adding a css-class on the item of question: 
+                </p>
+
+                <p>A good idea is to fetch the elements that are involved in the behaviour to be affected.</p>
+                <code>
+                    <pre>
+
+let homeLink = document.getElementById("home-link");
+let scienceLink = document.getElementById("science-link");
+let aboutLink = document.getElementById("about-link");
+
+
+let homeElement = document.getElementById("home");
+let scienceElement = document.getElementById("science");
+let aboutElement = document.getElementById("about");
+
+let yHome = homeElement.getBoundingClientRect().y;
+let yScience = scienceElement.getBoundingClientRect().y;
+let yAbout = aboutElement.getBoundingClientRect().y;
+                    </pre>
+                </code>
+
+                <p>Then address what action should activate the behaviour. In this case it's scrolling:</p>
+                <code>
+                    <pre>
+window.onscroll = function changeClass() {
+    yHome = homeElement.getBoundingClientRect().y;
+    yScience = scienceElement.getBoundingClientRect().y;
+    yAbout = aboutElement.getBoundingClientRect().y;
+
+    let scrollPosY = window.pageYOffset | document.body.scrollTop;
+    if (scrollPosY < yScience) {
+        homeLink.className = ('link-container active');
+        scienceLink.className = ('link-container');
+        aboutLink.className = ('link-container');
+    } else if (scrollPosY < yAbout + 158) {
+        homeLink.className = ('link-container');
+        scienceLink.className = ('link-container active');
+        aboutLink.className = ('link-container');
+    } else if (scrollPosY > yAbout + 158){
+        homeLink.className = ('link-container');
+        scienceLink.className = ('link-container');
+        aboutLink.className = ('link-container active');
+    }
+}
+                    </pre>
+                </code>
+                <p>For debugging purposes, console.log() can be included in the changeClass-function.</p>
+                <code>
+                    <pre>
+console.log("Got these y-coordinates... home:" + yHome + 
+" science:" + yScience + " about:" + yAbout);
+console.log("\n Scroll pos:" + scrollPosY);
+                    </pre>
+                </code>
+
+                <p>You have come a long way at this point, having made a prototype, then added the elements in a 
+                    semantic relevant way, followed by styling and finalizing with adding behavior.
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Lessons_Learned">
+            <header>Lessons Learned</header>
+            <article>
+                <p>We have covered a lot of ground, very fast, in a logical way that would make the process appear as 
+                    a one-way street. But of course, it is not! It's possible at any point to go back to the 
+                    prototyping phase with the new knowledge gained. At times it can even be that you are working with 
+                    behaviour and realize that the elements doesn't make semantic sense in how you want it to behave.  
+                </p>
+                <p>A lessons learned is therefore to leave room for contemplation at any stage. After having made a 
+                    prototype, take some time off when you don't look at it. "Go smell the flowers." When you come back 
+                    you should be prepared to see the prototype in a new way and adjust it if need be.
+                </p>
+                <p>
+                    Another lessons learned which is affected by the lesson previously; be humble! It is not probable 
+                    that the first draft you make, or the first implimentation of it that you do, is going to be the 
+                    best you can do. It can always be made better.
+                </p>
+                <p>
+                    And a final lesson, which hinges on the first: Set a deadline. Since your project can always be made 
+                    better, it can become an activity without an end. Having a goal and a set of objectives, be prepared 
+                    to call it a day when those are met.
+                </p>
+            </article>
+        </section>
+    </main>
 </body>
 </html>

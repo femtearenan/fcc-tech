@@ -1,0 +1,13 @@
+body {
+  padding: 1em 2em 1em 2em;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section {
+  margin-bottom: 3em;
+}
