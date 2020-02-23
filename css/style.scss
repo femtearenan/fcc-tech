@@ -61,7 +61,7 @@ body {
     z-index: 10;
 }
 
-.nav-toggle:checked ~ .menu-items {
+.nav-toggle:checked ~ #nav-link-container {
     display: grid;
     grid-row-start: 3;
     grid-auto-flow: row;
@@ -69,14 +69,17 @@ body {
     animation: show;
     animation-timing-function: ease-in-out;
     animation-duration: 0.5s;
+    animation-fill-mode: forwards;
 }
 
 @keyframes show {
     0% {
+        height: 0%;
         opacity: 0;
     }
     100% {
-        opacity: 100%;
+        height: 100%;
+        opacity: 1;
     }
 }
 
@@ -85,7 +88,7 @@ body {
 }
 
 #navbar {
-    position: fixed; 
+    position: fixed;
     top: 0;
     width: 100%;
     z-index: 10;
@@ -102,7 +105,6 @@ body {
 }
 
 #nav-link-container {
-    background-color: $lightBlue;
     a {
         font-family: sans-serif;
         min-width: 7em;
@@ -114,7 +116,7 @@ body {
     }
     a.active {
         color: $purple;
-    } 
+    }
 }
 
 #nav-toggle:checked ~ .burger-menu {
