@@ -115,13 +115,18 @@ main {
     flex-direction: column;
     justify-content: center;
     margin-right: 1.4em;
+    padding-bottom: 3em;
 }
 
 section {
-    margin-top: 1.5em;
+    margin-top: 3em;
     background-color: $white;
     padding: 0em 1em 2em 1em;
     border-radius: 0.6em;
+}
+
+#Introduction {
+    margin-top: 1.5em;
 }
 
 article {
@@ -135,6 +140,7 @@ img {
 }
 
 pre {
+    margin: auto;
     width: $smWidth;
     overflow-x: scroll;
 }
@@ -195,10 +201,18 @@ ul {
     #mockup {
         width: 380px;
     }
+
+    pre {
+        width: $mdWidth;
+    }
 }
 
 @media (min-width: 1200px) {
     html {
         font-size: 20px;
+    }
+
+    pre {
+        width: 800px;
     }
 }
