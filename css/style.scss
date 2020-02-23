@@ -46,6 +46,8 @@ body {
     }
 
     .burger-line {
+        position: relative;
+        top: 0em;
         height: 0.3em;
         width: 2em;
         background-color: $darkBlue;
@@ -101,6 +103,116 @@ body {
     a.active {
         color: $purple;
     } 
+}
+
+#nav-toggle:checked ~ .burger-menu {
+    > #top-bar {
+        animation-name: changeTop;
+        animation-duration: 0.6s;
+        animation-fill-mode: forwards;
+    }
+
+    > #middle-bar {
+        animation-name: changeMiddle;
+        animation-duration: 0.6s;
+        animation-fill-mode: forwards;
+    }
+
+    > #bottom-bar {
+        animation-name: changeBottom;
+        animation-duration: 0.6s;
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes changeTop {
+    0% {
+        top: 0em;
+    }
+    100% {
+        transform: rotate(45deg);
+        top: 0.6em;
+    }
+}
+
+@keyframes changeMiddle {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+    100% {
+        height: 0em;
+    }
+}
+
+@keyframes changeBottom {
+    0% {
+        top: 0em;
+    }
+    100% {
+        transform: rotate(-45deg);
+        top: -0.6em;
+    }
+}
+
+#nav-toggle:not(:checked) ~ .burger-menu {
+    > #top-bar.reverseable {
+        animation-name: reverseTop;
+        animation-duration: 0.6s;
+        animation-fill-mode: forwards;
+    }
+
+    > #middle-bar.reverseable {
+        animation-name: reverseMiddle;
+        animation-duration: 0.6s;
+        animation-fill-mode: forwards;
+    }
+
+    > #bottom-bar.reverseable {
+        animation-name: reverseBottom;
+        animation-duration: 0.6s;
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes reverseTop {
+    0% {
+        transform: rotate(45deg);
+        top: 0.6em;
+
+    }
+    100% {
+        top: 0em;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes reverseMiddle {
+    0% {
+        opacity: 0;
+        height: 0em;
+    }
+
+    50% {
+        opacity: 1;
+    }
+    100% {
+        height: 0.3em;
+    }
+}
+
+@keyframes reverseBottom {
+    0% {
+        transform: rotate(-45deg);
+        top: -0.6em;
+    }
+    100% {
+        top: 0em;
+        transform: rotate(0deg);
+    }
 }
 
 header {

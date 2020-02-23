@@ -11,7 +11,7 @@
     <div class="grid-item">
     <nav id="navbar">
         <header>Web site development processes</header>
-        <input type="checkbox" class="nav-toggle" id="nav-toggle">
+        <input type="checkbox" class="nav-toggle" id="nav-toggle" onclick="addReverseable()">
         <label for="nav-toggle" class="burger-menu">
             <div class="burger-line" id="top-bar"></div>
             <div class="burger-line"id="middle-bar"></div>
@@ -249,5 +249,16 @@ console.log("\n Scroll pos:" + scrollPosY);
     </div>
     </main>
     <script src="js/scroll-update.js"></script>
+    <script>
+        function addReverseable() {
+            let topBar = document.getElementById("top-bar");
+            let middleBar = document.getElementById("middle-bar");
+            let bottomBar = document.getElementById("bottom-bar");
+
+            topBar.className = ('burger-line reverseable');
+            middleBar.className = ('burger-line reverseable');
+            bottomBar.className = ('burger-line reverseable');
+        }
+    </script>
 </body>
 </html>
