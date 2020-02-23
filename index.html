@@ -3,20 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Lora&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.min.css">
-    <title>Developing from Protyped Web Site</title>
+    <title>Web site development processes</title>
 </head>
 <body>
+    <div class="grid-item">
     <nav id="navbar">
-        <header>Production from Protyped Web Site</header>
-        <div id="nav-link-container">
-            <a class="nav-link" href="#Introduction">Introduction</a>
-            <a class="nav-link" href="#Prerequisites">Prerequisites</a>
-            <a class="nav-link" href="#Prototyping">Prototyping</a>
-            <a class="nav-link" href="#Development">Development</a>
-            <a class="nav-link" href="#Lessons_Learned">Lessons Learned</a>
+        <header>Web site development processes</header>
+        <input type="checkbox" class="nav-toggle" id="nav-toggle">
+        <label for="nav-toggle" class="burger-menu">
+            <div class="burger-line" id="top-bar"></div>
+            <div class="burger-line"id="middle-bar"></div>
+            <div class="burger-line" id="bottom-bar"></div>
+            <!-- <img src="images/menu.png" alt="meny-knapp"> -->
+        </label>
+
+        <div id="nav-link-container" class="menu-items">
+            <a id="intro-link" class="nav-link active" href="#Introduction">Introduction</a>
+            <a id="preq-link" class="nav-link" href="#Prerequisites">Prerequisites</a>
+            <a id="proto-link" class="nav-link" href="#Prototyping">Prototyping</a>
+            <a id="dev-link" class="nav-link" href="#Development">Development</a>
+            <a id="ll-link" class="nav-link" href="#Lessons_Learned">Lessons Learned</a>
         </div>
     </nav>
+    </div>
+    <div class="grid-item">
     <main id="main-doc">
         <section class="main-section" id="Introduction">
             <header>Introduction</header>
@@ -24,11 +36,11 @@
                 <p>This documentation covers some of the aspects to consider when prototyping a website and then how to set up a process to make that design into production.</p>
                 <p>This documentation covers thusly:</p>
                 <ul>
-                    <li>Introduction: what you can expect of this documentation.</li>
-                    <li>Prerequisites: what we expect of the reader.</li>
-                    <li>Prototyping: before you drive, know where you are going!</li>
-                    <li>Development: now, drive where you planned to go!</li>
-                    <li>Lessons Learned: now that you know how to drive, how could it be more comfortably</li>
+                    <li><b>Introduction</b>: what you can expect of this documentation.</li>
+                    <li><b>Prerequisites</b>: what we expect of the reader.</li>
+                    <li><b>Prototyping</b>: before you drive, know where you are going!</li>
+                    <li><b>Development</b>: now, drive where you planned to go!</li>
+                    <li><b>Lessons Learned</b>: now that you know how to drive, how could it be more comfortably</li>
                 </ul>
 
                 <p>Congratulations!</p>
@@ -68,7 +80,7 @@
         <section class="main-section" id="Prototyping">
             <header>Prototyping</header>
             <article>
-                <img src="images/its a dog.png" alt="The pool is actually a dog's bowls, and the dog has come to drink some.">
+                <img id="dog-img" src="images/its a dog.png" alt="The pool is actually a dog's bowls, and the dog has come to drink some.">
                 <p>So if you just thought that sharks is all you have to worry about, think again!
                 Jumping in to the water without a plan might have been an okey idea. But did you consider the scale?
                 Prototyping takes care of what might come as a surprise further down the road if you had not.</p>
@@ -89,7 +101,7 @@
 
                 <p>With a prototyping software it's easy to see where elements go, what sizes they should be and which 
                 colours to use. Here's an example of how a prototype from Adobe XD can look like: </p>
-                <img src="images/Home.png" alt="A prototype as an image of a website.">
+                <img id="mockup" src="images/Home.png" alt="A prototype as an image of a website.">
 
                 <p>Having a finished prototype, you are then ready to move over to development.</p>
             </article>
@@ -176,7 +188,8 @@ window.onscroll = function changeClass() {
     yScience = scienceElement.getBoundingClientRect().y;
     yAbout = aboutElement.getBoundingClientRect().y;
 
-    let scrollPosY = window.pageYOffset | document.body.scrollTop;
+    let scrollPosY = window.pageYOffset 
+        | document.body.scrollTop;
     if (scrollPosY < yScience) {
         homeLink.className = ('link-container active');
         scienceLink.className = ('link-container');
@@ -231,6 +244,8 @@ console.log("\n Scroll pos:" + scrollPosY);
                 </p>
             </article>
         </section>
+    </div>
     </main>
+    <script src="js/scroll-update.js"></script>
 </body>
 </html>

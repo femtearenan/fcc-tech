@@ -1,13 +1,204 @@
+$smWidth: 280px;
+$mdWidth: 500px;
+
+$darkBlue: #17343b;
+$black: #1d1d1d;
+$white: #fdfdfd;
+$purple: #3c3484;
+$offPurple: #837e94;
+$lightPurple: #f4f0ff;
+$contrastLight: #fffaf0;
+$contrastDark: hsl(40, 100%, 40%);
+$lighterPurple: hsl(260, 60%, 98%);
+
+$lightBlue: #f0f7ff;
+
+
+html {
+    font-family: 'Lora', Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    color: $black;
+}
+
 body {
-    padding: 1em 2em 1em 2em; 
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    background-color: $lightBlue;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.burger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 0rem;
+    height: 1.5rem;
+    width: 270px;
+    margin-bottom: 1.2em;
+
+    img {
+        display: block;
+        width: 4em;
+    }
+
+    .burger-line {
+        height: 0.3em;
+        width: 2em;
+        background-color: $darkBlue;
+    }
+}
+
+.menu-items {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 10;
+}
+
+.nav-toggle:checked ~ .menu-items {
+    display: grid;
+    grid-row-start: 3;
+    grid-auto-flow: row;
+    grid-template-columns: auto;
+}
+
+.menu-items {
+    display: none;
+}
+
+#navbar {
+    position: fixed; 
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: $lightBlue;
+    header {
+        font-family: 'Cinzel', Georgia, 'Times New Roman', Times, serif;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 1em 0em 1em 0em;
+        color: #2a2635;
+        font-weight: bold;
+        font-size: 1.4em;
+    }
+}
+
+#nav-link-container {
+    background-color: $lightBlue;
+    a {
+        font-family: sans-serif;
+        min-width: 7em;
+        min-height: 1.7em;
+        margin-right: 1em;
+        font-size: 1.1em;
+        color: #6b7375;
+        text-decoration: none;
+    }
+    a.active {
+        color: $purple;
+    } 
+}
+
+header {
+    margin-top: 1em;
+    font-size: 2em;
 }
 
 main {
+    position: absolute;
+    top: 9.2em;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-right: 1.4em;
 }
 
 section {
-    margin-bottom: 3em;
+    margin-top: 1.5em;
+    background-color: $white;
+    padding: 0em 1em 2em 1em;
+    border-radius: 0.6em;
+}
+
+article {
+    text-align: justify;
+}
+
+img {
+    width: $smWidth;
+    display: block;
+    margin: auto;
+}
+
+pre {
+    width: $smWidth;
+    overflow-x: scroll;
+}
+
+code {
+    font-size: 0.8em;
+}
+
+ul {
+    list-style: circle;
+}
+
+#dog-img  {
+    margin-top: 1em;
+}
+
+@media (min-width: 800px) {
+    html {
+        font-size: 18px;
+    }
+
+    body {
+        display: grid;
+        grid-template-columns: 13em 1fr;
+    }
+
+    .burger-menu {
+        display: none;
+        cursor: pointer;
+    }
+
+    .menu-items {
+        height: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #navbar {
+        width: 10em;
+        z-index: 0;
+    }
+
+    .grid-item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #main-doc {
+        top: 1.2em;
+    }
+
+    img {
+        width: $mdWidth;
+    }
+
+    #mockup {
+        width: 380px;
+    }
+}
+
+@media (min-width: 1200px) {
+    html {
+        font-size: 20px;
+    }
 }
